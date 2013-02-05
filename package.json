@@ -12,5 +12,6 @@
         "express": "3.0.4"
     },
     "devDependencies": {
+        "jasmine-node":"*"
     }
 }
