@@ -12,6 +12,10 @@
         "express": "3.0.4"
     },
     "devDependencies": {
-        "jasmine-node":"*"
+        "jasmine-node":"*",
+        "supertest": "*",
+        "mocha":"1.7.4",
+        "request": "*",
+        "should": "*"
     }
 }

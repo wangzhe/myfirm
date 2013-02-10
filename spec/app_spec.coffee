@@ -1,7 +1,15 @@
-#request = require 'request'
+request = require('supertest')
+app = require(rootPath('app/app'))
 
-describe 'Calculator2', ->
+describe 'server status', ->
+  it 'should be supported via health check page', (done) ->
+    request(app)
+      .get('/status')
+      .expect("hello world", done)
 
-  it 'can add two positive numbers', ->
-    request "http://localhost:3000/status", (error, response, body) ->
-      expect(body).toEqual("hello world")
+
+describe 'provider information', ->
+  it 'should be retrieved by provider request', (done) ->
+    request(app)
+      .get('/me/provider')
+      .expect("hello world", done)

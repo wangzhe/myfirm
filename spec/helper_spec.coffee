@@ -1,4 +1,5 @@
 Calculator = require('../app/helper')
+should = require('should')
 
 describe 'Calculator', ->
 
@@ -6,4 +7,4 @@ describe 'Calculator', ->
     cal = new Calculator "haha"
 
     result = cal.min_function(3, 2)
-    expect(result).toBe 1
+    result.should.be.eql(1)
