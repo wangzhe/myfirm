@@ -11,5 +11,5 @@ describe 'server status', ->
 describe 'provider information', ->
   it 'should be retrieved by provider request', (done) ->
     request(app)
-      .get('/me/provider')
+      .get('/status')
       .expect("hello world", done)
