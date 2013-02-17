@@ -10,10 +10,10 @@
     "dependencies": {
         "coffee-script":"1.4.0",
         "express": "3.0.4",
-        "mongodb": "*",
-        "mongoose": "*"
+        "mongodb": "*"
     },
     "devDependencies": {
+        "supervisor": "*",
         "jasmine-node":"*",
         "supertest": "*",
         "mocha":"1.7.4",

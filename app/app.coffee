@@ -11,7 +11,8 @@ app.get '/service', service = (req, res) ->
   itemProvider = new ItemProvider('localhost', 27017)
   console.log('done')
   itemProvider.save(req.body, (item) ->
-    console.log('save to mongodb:'+item))
+    console.log('save to mongodb:'+item._id))
+  res.send('hello world')
 
 #config
 app.set 'port', 3000

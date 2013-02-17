@@ -9,6 +9,6 @@ namespace :app do
 
   desc "Start the app with auto-realod"
   task :watch do
-    sh %q{supervisor -i specs,views -e coffee,js startup.coffee}
+    sh './node_modules/.bin/supervisor -i specs,views -e coffee,js startup.coffee'
   end
 end
