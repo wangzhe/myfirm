@@ -1,0 +1,46 @@
+{
+    ":type":"application/vnd.myfirm.extension.card.fragment+json",
+    ":uid":"card-fdsaifewnivewwveq-001",
+    "content":{
+        ":type":"application/vnd.myfirm.extension.card.content+json",
+        "first_name":"Jack",
+        "last_name":"Wang",
+        "title":"Consultant",
+        "company":"ThoughtWorks (Beijing) Software Technology CO.LTD",
+        "address":"1502, 11 floor, Guohua Plaza, Beijing, China",
+        "mobile":"18611758973"
+    },
+    "items":[
+        {
+            ":type":"application/vnd.myfirm.extension.card.item+json",
+            "name":"modify",
+            "display":{
+                "text":"modify",
+                "icon":{
+                    "link":[
+                        {
+                            "type":"high-density",
+                            "href":"http://biz-card.myfirm.com/res/product-high.png"
+                        },
+                        {
+                            "type":"low-density",
+                            "href":"http://biz-card.myfirm.com/res/product-low.png"
+                        },
+                        {
+                            "type":"web-density",
+                            "href":"http://biz-card.myfirm.com/res/product-web.png"
+                        }
+                    ]
+                }
+            },
+            "navigation":{
+                ":type":"application/vnd.myfirm.navigation.url+json",
+                ":url":{
+                    ":href":"http://product-demo.myfirm.com/start",
+                    ":options":["GET"],
+                    ":acceptable_types":"application/vnd.myfirm.product+json"
+                }
+            }
+        }
+    ]
+}

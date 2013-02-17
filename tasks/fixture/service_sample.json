@@ -1,0 +1,68 @@
+{
+    ":type":"application/vnd.myfirm.services+json",
+    ":uid":"service-fdsaifewnivewwveq-001",
+    "items":[
+        {
+            ":type":"application/vnd.myfirm.services.item+json",
+            "name":"Business Card",
+            "display":{
+                "text":"My Card",
+                "icon":{
+                    "link":[
+                        {
+                            "type":"high-density",
+                            "href":"http://biz-card.myfirm.com/res/mycard-high.png"
+                        },
+                        {
+                            "type":"low-density",
+                            "href":"http://biz-card.myfirm.com/res/mycard-high.png"
+                        },
+                        {
+                            "type":"web-density",
+                            "href":"http://biz-card.myfirm.com/res/mycard-web.png"
+                        }
+                    ]
+                }
+            },
+            "navigation":{
+                ":type":"application/vnd.myfirm.navigation.url+json",
+                ":url":{
+                    ":href":"http://biz-card.myfirm.com/start",
+                    ":options":["GET"],
+                    ":acceptable_types":"application/vnd.myfirm.extension.card+json"
+                }
+            }
+        },
+        {
+            ":type":"application/vnd.myfirm.services.item+json",
+            "name":"business card service",
+            "display":{
+                "text":"Product Demo",
+                "icon":{
+                    "link":[
+                        {
+                            "type":"high-density",
+                            "href":"http://product-demo.myfirm.com/res/product-high.png"
+                        },
+                        {
+                            "type":"low-density",
+                            "href":"http://product-demo.myfirm.com/res/product-high.png"
+                        },
+                        {
+                            "type":"web-density",
+                            "href":"http://product-demo.myfirm.com/res/product-web.png"
+                        }
+                    ]
+                }
+            },
+            "navigation":{
+                ":type":"application/vnd.myfirm.navigation.url+json",
+                ":url":{
+                    ":href":"http://product-demo.myfirm.com/start",
+                    ":options":["GET"],
+                    ":acceptable_types":"application/vnd.myfirm.extension.product+json"
+                }
+            }
+        }
+    ]
+}
