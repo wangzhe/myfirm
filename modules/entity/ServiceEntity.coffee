@@ -1,10 +1,10 @@
 class ServiceEntity
 
-  constructor: (@req) ->
+  constructor: (@items) ->
 
   to_json: ->
-    read text from provider
-    json parser
-    "fghjkl"
+    ":type": "application/vnd.myfirm.services+json"
+    ":uid": "service-fdsaifewnivewwveq-001"
+    "items": @items
 
 exports = module.exports = ServiceEntity

@@ -1,15 +1,26 @@
 express = require 'express'
 mongodb = require 'mongodb'
 ServiceEntity = require '../modules/entity/ServiceEntity'
-ItemProvider = require('../modules/ItemProvider').ItemProvider
+ServiceProvider = require('../modules/ServiceProvider').ServiceProvider
 app = express()
 
-app.get '/status', status = (req, res)  ->
+status = (req, res)  ->
   res.send('health check...ok')
 
+app.get '/', status
+
+app.get '/status', status
+
 app.get '/v1/services', service = (req, res) ->
-  serviceEntity = new ServiceEntity(req)
-  res.send(serviceEntity.to_json())
+  serviceProvider = new ServiceProvider 'localhost', 27017, ->
+    serviceProvider.find {}, (services) ->
+      console.log service for service in services
+      items = [];
+      for service in services
+        delete service._id
+        items.push service
+      serviceEntity = new ServiceEntity(items)
+      res.send(serviceEntity.to_json())
 
 #config
 app.set 'port', 3000

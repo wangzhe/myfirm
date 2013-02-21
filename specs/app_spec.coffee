@@ -1,4 +1,5 @@
 request = require('supertest')
+fs = require('fs')
 app = require(rootPath('app/app'))
 
 describe 'server status', ->
@@ -10,6 +11,9 @@ describe 'server status', ->
 
 describe 'service information', ->
   it 'should be retrieved by service version 1 request', (done) ->
-    request(app)
-      .get('/v1/services')
-      .expect("2", done)
+    fs.readFile "specs/fixture/service_sample.json", 'utf8', (err,data) ->
+      console.log(err) if err
+
+      request(app)
+        .get('/v1/services')
+        .expect(JSON.parse(data), done)
