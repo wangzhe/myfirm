@@ -20,6 +20,7 @@ app.get '/v1/services', service = (req, res) ->
         delete service._id
         items.push service
       serviceEntity = new ServiceEntity(items)
+      serviceProvider.close()
       res.send(serviceEntity.to_json())
 
 #config
