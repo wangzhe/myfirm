@@ -5,11 +5,11 @@ describe 'server status', ->
   it 'should be supported via health check page', (done) ->
     request(app)
       .get('/status')
-      .expect("hello world", done)
+      .expect("health check...ok", done)
 
 
-describe 'provider information', ->
-  it 'should be retrieved by provider request', (done) ->
+describe 'service information', ->
+  it 'should be retrieved by service version 1 request', (done) ->
     request(app)
-      .get('/status')
-      .expect("hello world", done)
+      .get('/v1/services')
+      .expect("2", done)

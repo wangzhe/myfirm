@@ -35,7 +35,7 @@
         },
         {
             ":type":"application/vnd.myfirm.services.item+json",
-            "name":"business card service",
+            "name":"product demo",
             "display":{
                 "text":"Product Demo",
                 "icon":{

@@ -5,7 +5,7 @@ var BSON = require('mongodb').BSON;
 var ObjectID = require('mongodb').ObjectID;
 
 ItemProvider = function (host, port) {
-    this.db = new Db('backbonee', new Server(host, port, {auto_reconnect:true}, {}), {safe:true});
+    this.db = new Db('myfirm', new Server(host, port, {auto_reconnect:true}, {}), {safe:true});
     this.db.open(function (err, db) {
         if (!err) {
             console.log('connect');

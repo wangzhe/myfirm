@@ -1,0 +1,31 @@
+{
+    ":type":"application/vnd.myfirm.services.item+json",
+    "name":"product demo",
+    "display":{
+        "text":"Product Demo",
+        "icon":{
+            "link":[
+                {
+                    "type":"high-density",
+                    "href":"http://product-demo.myfirm.com/res/product-high.png"
+                },
+                {
+                    "type":"low-density",
+                    "href":"http://product-demo.myfirm.com/res/product-high.png"
+                },
+                {
+                    "type":"web-density",
+                    "href":"http://product-demo.myfirm.com/res/product-web.png"
+                }
+            ]
+        }
+    },
+    "navigation":{
+        ":type":"application/vnd.myfirm.navigation.url+json",
+        ":url":{
+            ":href":"http://product-demo.myfirm.com/start",
+            ":options":["GET"],
+            ":acceptable_types":"application/vnd.myfirm.extension.product+json"
+        }
+    }
+}
